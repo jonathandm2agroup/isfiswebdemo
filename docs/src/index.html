@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <title>ISFIS</title>
+  </head>
+  <body class="">
+    <!-- Acceso Aula virtual para versión de escritorio -->
+    <div
+      class="hidden lg:flex flex-row justify-end items-center bg-MidnightB lg:max-h-[150px]"
+    >
+      <div class="bg-DeepB px-3 py-2">
+        <a
+          class="flex flex-row justify-center items-center gap-2 text-white font-Poppins font-bold"
+          href="#"
+        >
+          <div class="text-3xl">
+            <i class="bi bi-person-workspace"></i>
+          </div>
+          <div>AULA VIRTUAL</div>
+        </a>
+      </div>
+    </div>
+    <header class="flex flex-col shadow bg-Blanco sticky top-0 z-50">
+      <div
+        class="flex flex-row justify-center items-center py-3 lg:justify-between"
+      >
+        <!-- Logo Container -->
+        <div class="flex justify-center lg:justify-center lg:w-[25%]">
+          <img src="./public/LOGO.png" class="w-[30%] lg:w-[50%]" />
+        </div>
+        <div class="flex justify-center pr-4">
+          <!-- Burger para móviles -->
+          <a class="text-3xl text-MidnightB lg:hidden" id="Burger">
+            <i class="bi bi-list"></i>
+          </a>
+        </div>
+        <nav class="hidden lg:flex mr-4 lg:w-[80%]">
+          <ul
+            class="font-Poppins font-bold lg:flex flex-row gap-3 items-center justify-start w-full"
+          >
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./index.html">INICIO</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./blog.html">BLOG</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./contactanos.html">CONTACTANOS</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./eventos.html">EVENTOS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Desplegable para móviles -->
+      <div
+        class="hidden flex-row justify-center w-full mb-4 lg:hidden"
+        id="desplegable"
+      >
+        <ul class="flex flex-col gap-5 font-Poppins font-bold w-full">
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./index.html">INICIO</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./blog.html">BLOG</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./contactanos.html">CONTACTANOS</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./eventos.html">EVENTOS</a>
+          </li>
+          <li class="text-center py-2 w-full text-Blanco bg-MidnightB">
+            <a class="flex flex-row justify-center items-center gap-2" href="#">
+              <div class="text-3xl"><i class="bi bi-person-workspace"></i></div>
+              <div>AULA VIRTUAL</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      <section class="bg-MidnightB py-4 px-2 xl:py-2">
+        <!-- Slider -->
+        <section id="novedades" class="splide" aria-label="Beautiful Images">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="">
+                  <!-- Información de la entrada-->
+                  <div
+                    class="absolute bg-MidnightB drop-shadow-BlueShadow ml-1 mt-2 px-3 py-2 max-w-[290px] mM:max-w-[340px] mL:max-w-[390px] md:max-w-[95%]"
+                  >
+                    <h3 class="text-Blanco font-Poppins font-bold xl:text-2xl">
+                      Lorem Ipsum
+                    </h3>
+                    <p
+                      class="text-justify text-Blanco text-xs font-Poppins xl:text-lg"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed sed purus vel nunc sodales eleifend. Duis id libero eu
+                      eros imperdiet tristique in vel metus. Donec nec purus nec
+                      eros varius semper.
+                    </p>
+                    <small
+                      class="text-left font-light font-Poppins italic text-Blanco xl:text-sm"
+                      >Fecha de Publicación: 23/05/2023</small
+                    >
+                  </div>
+                  <!-- Imagen destacada de la entrada -->
+                  <div class="">
+                    <img
+                      class="object-cover aspect-[2/2] max-h-[200px] w-full lg:max-h-[300px]"
+                      src="./public/latrach-med-jamil-wSp40WIfOxI-unsplash.jpg"
+                    />
+                  </div>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div>
+                  <!-- Información de la entrada-->
+                  <div
+                    class="absolute bg-MidnightB drop-shadow-BlueShadow ml-1 mt-2 px-3 py-2 max-w-[290px] mM:max-w-[340px] mL:max-w-[390px] md:max-w-[95%]"
+                  >
+                    <h3 class="text-Blanco font-Poppins font-bold xl:text-2xl">
+                      Lorem Ipsum
+                    </h3>
+                    <p
+                      class="text-justify text-Blanco text-xs font-Poppins xl:text-lg"
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed sed purus vel nunc sodales eleifend. Duis id libero eu
+                      eros imperdiet tristique in vel metus. Donec nec purus nec
+                      eros varius semper.
+                    </p>
+                    <small
+                      class="text-left font-light font-Poppins italic text-Blanco xl:text-sm"
+                      >Fecha de Publicación: 23/05/2023</small
+                    >
+                  </div>
+                  <!-- Imagen destacada de la entrada -->
+                  <div class="">
+                    <img
+                      class="object-cover aspect-[2/2] max-h-[200px] w-full lg:max-h-[300px]"
+                      src="./public/tim-swaan-eOpewngf68w-unsplash.jpg"
+                    />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <!-- Hero forma 1 -->
+      <section class="bg-Blanco text-MidnightB py-4 font-Poppins w-full">
+        <h2 class="font-bold text-center text-xl lg::text-2xl">
+          ¿POR QUÉ ISFIS ES TU MEJOR OPCIÓN?
+        </h2>
+        <!-- Info Content -->
+        <div
+          class="flex flex-col xl:flex-row gap-3 px-4 mt-2 items-center lg:items-start lg:justify-center lg:w-1/2 lg:m-auto lg:mt-5"
+        >
+          <img
+            class="object-cover aspect-[2/2] max-h-[200px] max-w-[200px]"
+            src="./public/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg"
+          />
+          <div class="text-justify text-sm lg:text-base">
+            Profesionales con apreciable formación docente y destacada
+            trayectoria en la industria de Banca, Seguros, Cumplimiento,
+            Marketing, Ventas y Habilidades Blandas residenciados en diferentes
+            países de Latinoamérica.
+            <br />
+            <br />
+            Metodología vivencial con casos de estudios, talleres prácticos y
+            simuladores de negocios que permiten cumplir con las fases de
+            evaluación, desarrollo y aplicación inmediata de conocimientos.
+          </div>
+        </div>
+      </section>
+      <!-- Hero forma 2 -->
+      <section class="bg-MidnightB text-Blanco py-4 font-Poppins w-full">
+        <h2 class="font-bold text-center text-2xl">Aprovado por MEDUCA</h2>
+        <!-- Info Content -->
+        <div
+          class="flex flex-col xl:flex-row gap-3 px-4 mt-2 items-center lg:items-center lg:justify-center lg:w-1/2 lg:m-auto lg:mt-5"
+        >
+          <div class="text-justify text-sm lg:text-base">
+            <p class="text-center font-Poppins text-Blanco text-base">
+              Resolución N°.5260 <br />
+              del 11 de nov 2021
+            </p>
+          </div>
+          <img
+            class=""
+            src="./public/superintendencia-p1bvz5pf3sd4za3bg09e4yupf10qxfdmpqgidmaxdw.png"
+          />
+        </div>
+      </section>
+      <!-- Hero forma 3 -->
+      <section class="bg-Blanco text-MidnightB py-4 font-Poppins w-full">
+        <h2 class="font-bold text-center text-xl lg::text-2xl">
+          ¿QUIENES SOMOS?
+        </h2>
+        <!-- Info Content -->
+        <div
+          class="flex flex-col xl:flex-row gap-3 px-4 mt-2 items-center lg:items-start lg:justify-center lg:w-3/4 lg:m-auto lg:mt-5"
+        >
+          <img
+            class="object-cover aspect-[2/2] rounded-l-md max-h-[400px] lg:m-auto"
+            src="./public/quienes-somos-conte.jpg"
+          />
+          <div class="text-justify text-sm lg:text-base">
+            <p class="text-justify">
+              Somos un Centro Educativo Regulado y Supervisado por la
+              Superintendencia de Seguros y Reaseguros de Panamá.
+            </p>
+            <br />
+            <p class="text-justify">
+              Nuestro hub se encuentra en la Ciudad de Panamá y a través de la
+              Plataforma Virtual Educativa, brindamos capacitaciones de
+              Gerencia, Banca, Seguros, Cumplimiento, Marketing, Ventas y
+              Habilidades Blandas para toda Latinoamérica.
+            </p>
+            <br />
+            <p class="text-justify">
+              Contamos con un Equipo Académico profesional y de larga
+              trayectoria a nivel internacional, lo que permite que cada una de
+              las capacitaciones tengan un enfoque global y actualizado de los
+              acontecimientos sucedidos a nivel mundial.
+            </p>
+            <br />
+            <p class="text-justify">
+              A su vez, ISFIS está debidamente preparado para brindar
+              capacitaciones en formato Incompany, adaptado a los requerimientos
+              de cada una de las empresas.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col-reverse xl:flex-row gap-3 px-4 mt-2 items-center lg:items-start lg:justify-center lg:w-3/4 lg:m-auto lg:mt-5"
+        >
+          <div class="text-justify text-sm lg:text-base">
+            <p class="text-justify">
+              Con el objetivo de formar profesionales integrales, hemos
+              incorporado a los programas de estudios un módulo de habilidades
+              blandas, que impulsará el crecimiento personal y profesional de
+              nuestros egresados.
+            </p>
+            <br />
+            <p class="text-justify">
+              Los Programas de IFIS, van dirigidos a Empresas de Seguros,
+              Reaseguros, Corredores de Seguros, Corredores de Reaseguros,
+              Ajustadores, Administradores de carteras de seguros, Bienes
+              Raíces, Constructoras, Bancos, Financieras, Hospitales, Clínicas,
+              Organismos Públicos, Departamentos Administrativos, Departamentos
+              de Recursos Humanos, Abogados, y a todo aquel que desee iniciar o
+              afianzar sus conocimientos en Seguros.
+            </p>
+          </div>
+          <img
+            class="object-cover aspect-[2/2] rounded-r-md max-h-[400px] lg:m-auto"
+            src="./public/students-work-on-the-project-with-books-sitting-at-little-table-in-the-library-scaled.jpg"
+          />
+        </div>
+      </section>
+      <!-- Mision  Vision -->
+      <section
+        class="bg-DeepB text-white py-4 font-Poppins w-full flex flex-col xl:flex-row gap-3 px-4 lg:px-[30%]"
+      >
+        <!-- Info Content -->
+        <div>
+          <h2 class="text-center font-bold lg:text-2xl">MISION</h2>
+          <div class="text-justify text-sm lg:text-base">
+            Somos un instituto superior que brinda formación al talento,
+            impulsando el desarrollo académico y tecnológico que exige el
+            mercadeo actual en materia de banca, finanzas, seguros y reaseguros.
+          </div>
+        </div>
+        <!-- Rombo -->
+        <div class="text-white mx-auto xl:my-auto h-full text-4xl">
+          <i class="bi bi-heptagon-fill"></i>
+        </div>
+        <!-- Vision -->
+        <div>
+          <h2 class="text-center font-bold lg:text-2xl">VISION</h2>
+          <div class="text-justify text-sm lg:text-base">
+            Ser referente académico para la formación de profesionales en el
+            área de banca, finanzas, seguros y reaseguros, que genera
+            competencias y habilidades diferenciadas desde el contexto nacional
+            y global.
+          </div>
+        </div>
+      </section>
+      <!-- Slider Instalaciones -->
+      <section class="bg-MidnightB py-4">
+        <h3 class="text-xl font-Poppins font-bold text-Blanco pl-5 lg:text-3xl">
+          INSTALACIONES
+        </h3>
+        <!-- Carrousel de las instalaciones -->
+        <section
+          id="instalaciones"
+          class="splide lg:mx-auto"
+          aria-label="Beautiful Images"
+        >
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="public/gal6.jpg" />
+              </li>
+              <li class="splide__slide">
+                <img src="public/gal5.jpg" />
+              </li>
+              <li class="splide__slide">
+                <img src="./public/gal7.jpg" />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <!-- Seccion de clientes -->
+      <section
+        class="bg-Blanco flex flex-col justify-center items-center gap-4 text-MidnightB font-Poppins my-4 font-bold py-2"
+      >
+        <h3 class="text-center text-2xl lg:text-4xl">NUESTROS CLIENTES</h3>
+        <section
+          id="clientes"
+          class="splide lg:w-1/2 lg:mx-auto lg:mt-6"
+          aria-label="Beautiful Images"
+        >
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="public/ancon.png" class="w-1/2 m-auto" />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <!-- Seccion de testimonios -->
+      <section
+        class="bg-DeepB text-Blanco font-Poppins flex flex-col gap-3 py-3 px-4 justify-center items-center overflow-hidden"
+      >
+        <h3 class="font-bold text-3xl text-center lg:text-4xl">TESTIMONIOS</h3>
+        <!-- Slider de testimonios -->
+        <section id="testimonios" class="splide" aria-label="Beautiful Images">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="flex flex-col gap-5 justify-center items-center">
+                  <p class="text-center text-sm text-Blanco w-1/2 lg:text-base">
+                    <span class="text-4xl text-MidnightB">"</span>Me encantó
+                    formar parte del instituto. Clases donde los facilitadores
+                    se les ve laexperiencia y el conocimiento de seguros. Y
+                    gracias a eso he podido aplicar los conocimientos adquiridos
+                    en mi vida laboral.
+                  </p>
+                  <p
+                    class="text-center text-BrightL text-xl font-bold lg:text-2xl"
+                  >
+                    Stephany Denis Nieto
+                  </p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="flex flex-col gap-5 justify-center items-center">
+                  <p class="text-center text-sm text-Blanco w-1/2 lg:text-base">
+                    <span class="text-4xl text-MidnightB">"</span>El curso del
+                    instituto es un curso extraordinario, que forma a los
+                    mejores profesionales en seguros. Desde los profesores
+                    especializados en cada tema, y todos los temas que el curso
+                    enseña con detalle. Estoy muy agradecido.
+                  </p>
+                  <p
+                    class="text-center text-BrightL text-xl font-bold lg:text-2xl"
+                  >
+                    Andrés Parra
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="flex flex-col items-center md:flex-row md:gap-3 w-full bg-MidnightB"
+    >
+      <section class="py-4 w-full">
+        <div class="flex flex-col justify-center items-center">
+          <p class="font-Poppins font-bold text-xl text-BrightB">
+            El Instituto
+          </p>
+          <ol class="list-disc mt-2 marker:text-BrightL">
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              ¿Quienes Somos?
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              ¿Nuestros Valores
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              ¿Que hacemos?
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              Propuesta de Valor
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              Misión/Visión
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              Eventos
+            </li>
+          </ol>
+        </div>
+        <div class="flex justify-center mt-3 flex-col px-5">
+          <h4 class="text-Blanco font-bold text-xl text-center">
+            Estámos ubicados en
+          </h4>
+          <iframe
+            class="max-h-[400px] border-2 border-BrightL"
+            src="./map.html"
+          ></iframe>
+        </div>
+      </section>
+      <section
+        class="font-Poppins w-full text-Blanco font-bold text-xl text-center flex flex-col justify-center items-center"
+      >
+        <div class="my-6">
+          <h4>Contáctanos</h4>
+          <div class="text-sm mt-1">
+            <i class="bi bi-telephone-fill"></i> (+507) 302-2994
+          </div>
+          <div class="text-sm mt-1">
+            <i class="bi bi-envelope-fill"></i> correo@correo.com
+          </div>
+        </div>
+        <div class="my-6">
+          <h4>Redes Sociales</h4>
+          <div
+            class="flex flex-row justify-center items-center gap-5 mt-1 text-3xl"
+          >
+            <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col w-full justify-center items-center my-5">
+        <div class="w-[30%]">
+          <img
+            src="./public/superintendencia-p1bvz5pf3sd4za3bg09e4yupf10qxfdmpqgidmaxdw.png"
+            class="w-full"
+          />
+        </div>
+        <div class="mt-1">
+          <p class="text-center font-Poppins text-Blanco text-xs">
+            Aprobado por MEDUCA <br />
+            Resolución N°.5260 <br />
+            del 11 de nov 2021
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="./index.js"></script>
+</html>

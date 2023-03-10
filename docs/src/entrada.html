@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <title>ENTRADA</title>
+  </head>
+  <body>
+    <!-- Acceso Aula virtual para versión de escritorio -->
+    <div
+      class="hidden lg:flex flex-row justify-end items-center bg-MidnightB lg:max-h-[150px]"
+    >
+      <div class="bg-DeepB px-3 py-2">
+        <a
+          class="flex flex-row justify-center items-center gap-2 text-white font-Poppins font-bold"
+          href="#"
+        >
+          <div class="text-3xl">
+            <i class="bi bi-person-workspace"></i>
+          </div>
+          <div>AULA VIRTUAL</div>
+        </a>
+      </div>
+    </div>
+    <header class="flex flex-col shadow bg-Blanco sticky top-0 z-50">
+      <div
+        class="flex flex-row justify-center items-center py-3 lg:justify-between"
+      >
+        <!-- Logo Container -->
+        <div class="flex justify-center lg:justify-center lg:w-[25%]">
+          <img src="./public/LOGO.png" class="w-[30%] lg:w-[50%]" />
+        </div>
+        <div class="flex justify-center pr-4">
+          <!-- Burger para móviles -->
+          <a class="text-3xl text-MidnightB lg:hidden" id="Burger">
+            <i class="bi bi-list"></i>
+          </a>
+        </div>
+        <nav class="hidden lg:flex mr-4 lg:w-[80%]">
+          <ul
+            class="font-Poppins font-bold lg:flex flex-row gap-3 items-center justify-start w-full"
+          >
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./index.html">INICIO</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./blog.html">BLOG</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./contactanos.html">CONTACTANOS</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./eventos.html">EVENTOS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Desplegable para móviles -->
+      <div
+        class="hidden flex-row justify-center w-full mb-4 lg:hidden"
+        id="desplegable"
+      >
+        <ul class="flex flex-col gap-5 font-Poppins font-bold w-full">
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./index.html">INICIO</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./blog.html">BLOG</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./contactanos.html">CONTACTANOS</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./eventos.html">EVENTOS</a>
+          </li>
+          <li class="text-center py-2 w-full text-Blanco bg-MidnightB">
+            <a class="flex flex-row justify-center items-center gap-2" href="#">
+              <div class="text-3xl"><i class="bi bi-person-workspace"></i></div>
+              <div>AULA VIRTUAL</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section
+        class="w-full flex flex-col justify-center gap-3 my-4 font-Poppins px-4"
+      >
+        <h5 class="text-MidnightB text-xl text-center font-bold w-full">
+          Lorem Ipsum
+        </h5>
+        <img
+          class="w-full m-auto rounded lg:w-1/2"
+          src="./public/brian-tromp-Kepb83eqqOk-unsplash.jpg"
+        />
+        <p class="text-justify text-base">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet in,
+          voluptas magnam alias optio aliquam voluptate sit? Et autem error nam
+          fugit, necessitatibus, magnam quos blanditiis sed optio, distinctio
+          harum?
+        </p>
+        <p class="text-justify text-base">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet in,
+          voluptas magnam alias optio aliquam voluptate sit? Et autem error nam
+          fugit, necessitatibus, magnam quos blanditiis sed optio, distinctio
+          harum?
+        </p>
+      </section>
+    </main>
+    <footer
+      class="flex flex-col items-center md:flex-row md:gap-3 w-full bg-MidnightB"
+    >
+      <section class="py-4 w-full">
+        <div class="flex flex-col justify-center items-center">
+          <p class="font-Poppins font-bold text-xl text-BrightB">
+            El Instituto
+          </p>
+          <ol class="list-disc mt-2 marker:text-BrightL">
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              ¿Quienes Somos?
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              ¿Nuestros Valores
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              ¿Que hacemos?
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              Propuesta de Valor
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              Misión/Visión
+            </li>
+            <li class="font-Poppins font-normal text-sm text-Blanco">
+              Eventos
+            </li>
+          </ol>
+        </div>
+        <div class="flex justify-center mt-3 flex-col px-5">
+          <h4 class="text-Blanco font-bold text-xl text-center">
+            Estámos ubicados en
+          </h4>
+          <iframe
+            class="max-h-[400px] border-2 border-BrightL"
+            src="./map.html"
+          ></iframe>
+        </div>
+      </section>
+      <section
+        class="font-Poppins w-full text-Blanco font-bold text-xl text-center flex flex-col justify-center items-center"
+      >
+        <div class="my-6">
+          <h4>Contáctanos</h4>
+          <div class="text-sm mt-1">
+            <i class="bi bi-telephone-fill"></i> (+507) 302-2994
+          </div>
+          <div class="text-sm mt-1">
+            <i class="bi bi-envelope-fill"></i> correo@correo.com
+          </div>
+        </div>
+        <div class="my-6">
+          <h4>Redes Sociales</h4>
+          <div
+            class="flex flex-row justify-center items-center gap-5 mt-1 text-3xl"
+          >
+            <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col w-full justify-center items-center my-5">
+        <div class="w-[30%]">
+          <img
+            src="./public/superintendencia-p1bvz5pf3sd4za3bg09e4yupf10qxfdmpqgidmaxdw.png"
+            class="w-full"
+          />
+        </div>
+        <div class="mt-1">
+          <p class="text-center font-Poppins text-Blanco text-xs">
+            Aprobado por MEDUCA <br />
+            Resolución N°.5260 <br />
+            del 11 de nov 2021
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="./index.js"></script>
+</html>
