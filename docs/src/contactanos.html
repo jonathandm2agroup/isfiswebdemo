@@ -24,61 +24,113 @@
     </div>
 </div>
 <header class="flex flex-col shadow bg-Blanco sticky top-0 z-50">
-   <div class="flex flex-row justify-center items-center py-3 lg:justify-between">
-     <!-- Logo Container -->
-        <div class="flex justify-center lg:justify-center lg:w-[25%]">
-            <img src="./public/LOGO.png" class="w-[30%] lg:w-[50%]"/>
-        </div>
-        <div class="flex justify-center pr-4">
-            <!-- Burger para móviles -->
-            <a class="text-3xl text-MidnightB lg:hidden" id="Burger">
-                <i class="bi bi-list"></i>
-            </a>
-        </div>
-        <nav class=" hidden lg:flex mr-4 lg:w-[80%]">
-            <ul class="font-Poppins font-bold lg:flex flex-row gap-3 items-center justify-start w-full">
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./index.html">INICIO</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./blog.html">BLOG</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./contactanos.html">CONTACTANOS</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./eventos.html">EVENTOS</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                  <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
-              </li>
-            </ul>
-        </nav>
-   </div>
-    <!-- Desplegable para móviles -->
-    <div class="hidden flex-row justify-center w-full mb-4 lg:hidden" id="desplegable">
-        <ul class="flex flex-col gap-5 font-Poppins font-bold w-full">
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./index.html">INICIO</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./oferta-academica.html">OFERTA ACADÉMICA</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./blog.html">BLOG</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./contactanos.html">CONTACTANOS</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./eventos.html">EVENTOS</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a></li>
-            <li class="text-center py-2 w-full text-Blanco bg-MidnightB">
-                <a class="flex flex-row justify-center items-center gap-2" href="#">
-                    <div class="text-3xl"><i class="bi bi-person-workspace"></i></div> <div>AULA VIRTUAL</div>
-                </a>
-            </li>
+    <div
+      class="flex flex-row justify-center items-center py-3 lg:justify-between"
+    >
+      <!-- Logo Container -->
+      <div class="flex justify-center lg:justify-center lg:w-[25%]">
+        <img src="./public/LOGO.png" class="w-[30%] lg:w-[50%]" />
+      </div>
+      <div class="flex justify-center pr-4">
+        <!-- Burger para móviles -->
+        <a class="text-3xl text-MidnightB lg:hidden" id="Burger">
+          <i class="bi bi-list"></i>
+        </a>
+      </div>
+      <nav class="hidden lg:flex mr-4 lg:w-[80%]">
+        <ul
+          class="font-Poppins font-bold lg:flex flex-row gap-3 items-center justify-start w-full"
+        >
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./index.html">INICIO</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./eventos.html">EVENTOS</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./contactanos.html">CONTACTANOS</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./blog.html">BLOG</a>
+          </li>
         </ul>
+      </nav>
     </div>
-</header>
+    <!-- Desplegable para móviles -->
+    <div
+      class="hidden flex-row justify-center w-full mb-4 lg:hidden"
+      id="desplegable"
+    >
+      <ul class="flex flex-col gap-5 font-Poppins font-bold w-full">
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./index.html">INICIO</a>
+        </li>
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
+        </li>
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
+        </li>
+        
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./eventos.html">EVENTOS</a>
+        </li>
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
+        </li>
+        
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./contactanos.html">CONTACTANOS</a>
+        </li>
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./blog.html">BLOG</a>
+        </li>
+        <li class="text-center py-2 w-full text-Blanco bg-MidnightB">
+          <a class="flex flex-row justify-center items-center gap-2" href="#">
+            <div class="text-3xl"><i class="bi bi-person-workspace"></i></div>
+            <div>AULA VIRTUAL</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
 <!-- Main -->
     <main class="">
         <section class="relative md:px-0 px-4 my-6 rounded bg-white lg:w-3/4 shadow-md m-auto z-40">
@@ -90,12 +142,12 @@
                 </div>
                 <form action="#" class="w-full bg-MidnightB shadow-md rounded md:mx-4 py-5 xl:py-0 px-4 flex flex-col justify-center items-center gap-4 md:w-1/2">
                     <div class="w-full flex flex-col xl:flex-row gap-3">
-                        <input class="px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs" type="text" name="Nombre" id="" placeholder="Nombre">
-                        <input class="px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs" type="text" name="Apellido" id="" placeholder="Apellido">
+                        <input class="w-full px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs" type="text" name="Nombre" id="" placeholder="Nombre">
+                        <input class="w-full px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs" type="text" name="Apellido" id="" placeholder="Apellido">
                     </div>
                     <div class=" w-full flex flex-col xl:flex-row gap-3">
-                        <input class="px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs"  type="tel" name="Teléfonp" id="" placeholder="Teléfono">
-                        <input class="px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs"  type="email" name="Correo" id="" placeholder="Correo">
+                        <input class="w-full px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs"  type="tel" name="Teléfonp" id="" placeholder="Teléfono">
+                        <input class="w-full px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs"  type="email" name="Correo" id="" placeholder="Correo">
                     </div>
                     <textarea placeholder="Asunto" class="w-full px-3 py-2 text-base text-MidnightB font-Poppins focus:outline-none focus:border-BrightL focus:ring-1 focus:ring-BrightL invalid:border-MidnightB invalid:text-MidnightB focus:invalid:border-MidnightB focus:invalid:ring-MidnightB rounded-md border border-BrightL placeholder:font-Poppins placeholder:text-MidnightB placeholder:text-xs" name="asunto"></textarea>
                     <input class="transition border hover:bg-MidnightB hover:text-white border-BrightL rounded-full px-4 py-1 text-MidnightB font-Poppins font bg-BrightL" type="submit" value="Enviar">
@@ -148,7 +200,6 @@
         </div>
         <div class="mt-1">
             <p class="text-center font-Poppins text-Blanco text-xs">
-                Aprobado por MEDUCA <br>
                 Resolución N°.5260 <br>
                 del 11 de nov 2021
             </p>

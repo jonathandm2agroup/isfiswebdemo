@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=|, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
@@ -24,61 +24,113 @@
     </div>
 </div>
 <header class="flex flex-col shadow bg-Blanco sticky top-0 z-50">
-   <div class="flex flex-row justify-center items-center py-3 lg:justify-between">
-     <!-- Logo Container -->
-        <div class="flex justify-center lg:justify-center lg:w-[25%]">
-            <img src="./public/LOGO.png" class="w-[30%] lg:w-[50%]"/>
-        </div>
-        <div class="flex justify-center pr-4">
-            <!-- Burger para móviles -->
-            <a class="text-3xl text-MidnightB lg:hidden" id="Burger">
-                <i class="bi bi-list"></i>
-            </a>
-        </div>
-        <nav class=" hidden lg:flex mr-4 lg:w-[80%]">
-            <ul class="font-Poppins font-bold lg:flex flex-row gap-3 items-center justify-start w-full">
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./index.html">INICIO</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./blog.html">BLOG</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./contactanos.html">CONTACTANOS</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                    <a href="./eventos.html">EVENTOS</a>
-                </li>
-                <li class="text-center hvr-underline-from-left hover:ease-in-out text-sm  hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB">
-                  <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
-              </li>
-            </ul>
-        </nav>
-   </div>
-    <!-- Desplegable para móviles -->
-    <div class="hidden flex-row justify-center w-full mb-4 lg:hidden" id="desplegable">
-        <ul class="flex flex-col gap-5 font-Poppins font-bold w-full">
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./index.html">INICIO</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./oferta-academica.html">OFERTA ACADÉMICA</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./blog.html">BLOG</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./contactanos.html">CONTACTANOS</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./eventos.html">EVENTOS</a></li>
-            <li class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB  hover:text-Blanco hover:bg-MidnightB"><a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a></li>
-            <li class="text-center py-2 w-full text-Blanco bg-MidnightB">
-                <a class="flex flex-row justify-center items-center gap-2" href="#">
-                    <div class="text-3xl"><i class="bi bi-person-workspace"></i></div> <div>AULA VIRTUAL</div>
-                </a>
-            </li>
+    <div
+      class="flex flex-row justify-center items-center py-3 lg:justify-between"
+    >
+      <!-- Logo Container -->
+      <div class="flex justify-center lg:justify-center lg:w-[25%]">
+        <img src="./public/LOGO.png" class="w-[30%] lg:w-[50%]" />
+      </div>
+      <div class="flex justify-center pr-4">
+        <!-- Burger para móviles -->
+        <a class="text-3xl text-MidnightB lg:hidden" id="Burger">
+          <i class="bi bi-list"></i>
+        </a>
+      </div>
+      <nav class="hidden lg:flex mr-4 lg:w-[80%]">
+        <ul
+          class="font-Poppins font-bold lg:flex flex-row gap-3 items-center justify-start w-full"
+        >
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./index.html">INICIO</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./eventos.html">EVENTOS</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./contactanos.html">CONTACTANOS</a>
+          </li>
+          <li
+            class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+          >
+            <a href="./blog.html">BLOG</a>
+          </li>
         </ul>
+      </nav>
     </div>
-</header>
+    <!-- Desplegable para móviles -->
+    <div
+      class="hidden flex-row justify-center w-full mb-4 lg:hidden"
+      id="desplegable"
+    >
+      <ul class="flex flex-col gap-5 font-Poppins font-bold w-full">
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./index.html">INICIO</a>
+        </li>
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./oferta-academica.html">OFERTA ACADÉMICA</a>
+        </li>
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
+        </li>
+        
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./eventos.html">EVENTOS</a>
+        </li>
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
+        </li>
+        
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./contactanos.html">CONTACTANOS</a>
+        </li>
+        <li
+          class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+        >
+          <a href="./blog.html">BLOG</a>
+        </li>
+        <li class="text-center py-2 w-full text-Blanco bg-MidnightB">
+          <a class="flex flex-row justify-center items-center gap-2" href="#">
+            <div class="text-3xl"><i class="bi bi-person-workspace"></i></div>
+            <div>AULA VIRTUAL</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
 <!-- Main -->
     <main>
 
@@ -128,7 +180,6 @@
         </div>
         <div class="mt-1">
             <p class="text-center font-Poppins text-Blanco text-xs">
-                Aprobado por MEDUCA <br>
                 Resolución N°.5260 <br>
                 del 11 de nov 2021
             </p>

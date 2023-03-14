@@ -73,7 +73,12 @@
             <li
               class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
             >
-              <a href="./blog.html">BLOG</a>
+              <a href="./eventos.html">EVENTOS</a>
+            </li>
+            <li
+              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
+            >
+              <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
             </li>
             <li
               class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
@@ -83,12 +88,7 @@
             <li
               class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
             >
-              <a href="./eventos.html">EVENTOS</a>
-            </li>
-            <li
-              class="text-center hvr-underline-from-left hover:ease-in-out text-sm hover:duration-300 text-MidnightB py-2 w-full hover:text-BrightB"
-            >
-              <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
+              <a href="./blog.html">BLOG</a>
             </li>
           </ul>
         </nav>
@@ -114,16 +114,7 @@
           >
             <a href="./calendario-academico.html">CALENDARIO ACADÉMICO</a>
           </li>
-          <li
-            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
-          >
-            <a href="./blog.html">BLOG</a>
-          </li>
-          <li
-            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
-          >
-            <a href="./contactanos.html">CONTACTANOS</a>
-          </li>
+          
           <li
             class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
           >
@@ -133,6 +124,17 @@
             class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
           >
             <a href="./bolsa-trabajo.html">BOLSA DE TRABAJO</a>
+          </li>
+          
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./contactanos.html">CONTACTANOS</a>
+          </li>
+          <li
+            class="text-center border-y-2 border-BrightB hover:ease-in-out hover:duration-300 text-MidnightB py-2 w-full hover:border-MidnightB hover:text-Blanco hover:bg-MidnightB"
+          >
+            <a href="./blog.html">BLOG</a>
           </li>
           <li class="text-center py-2 w-full text-Blanco bg-MidnightB">
             <a class="flex flex-row justify-center items-center gap-2" href="#">
@@ -244,19 +246,18 @@
       </section>
       <!-- Hero forma 2 -->
       <section class="bg-MidnightB text-Blanco py-4 font-Poppins w-full">
-        <h2 class="font-bold text-center text-2xl">Aprovado por MEDUCA</h2>
         <!-- Info Content -->
         <div
           class="flex flex-col xl:flex-row gap-3 px-4 mt-2 items-center lg:items-center lg:justify-center lg:w-1/2 lg:m-auto lg:mt-5"
         >
-          <div class="text-justify text-sm lg:text-base">
-            <p class="text-center font-Poppins text-Blanco text-base">
+          <div class="text-justify text-sm lg:text-xl">
+            <p class="text-center font-Poppins text-Blanco">
               Resolución N°.5260 <br />
               del 11 de nov 2021
             </p>
           </div>
           <img
-            class=""
+            class="w-1/2"
             src="./public/superintendencia-p1bvz5pf3sd4za3bg09e4yupf10qxfdmpqgidmaxdw.png"
           />
         </div>
@@ -357,26 +358,45 @@
         </div>
       </section>
       <!-- Slider Instalaciones -->
-      <section class="bg-MidnightB py-4">
+      <section class="bg-MidnightB py-4 lg:max-h-[500px]">
         <h3 class="text-xl font-Poppins font-bold text-Blanco pl-5 lg:text-3xl">
           INSTALACIONES
         </h3>
         <!-- Carrousel de las instalaciones -->
         <section
           id="instalaciones"
-          class="splide lg:mx-auto"
+          class="splide flex lg:hidden lg:mx-auto"
           aria-label="Beautiful Images"
         >
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <img src="public/gal6.jpg" />
+          <div class="splide__track lg:hidden">
+            <ul class="splide__list ">
+              <li class="splide__slide ">
+                <img class="" src="public/gal6.jpg" />
               </li>
               <li class="splide__slide">
-                <img src="public/gal5.jpg" />
+                <img class="" src="public/gal5.jpg" />
               </li>
               <li class="splide__slide">
-                <img src="./public/gal7.jpg" />
+                <img class="" src="./public/gal7.jpg" />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section
+          id="instalacionesDesktop"
+          class="splide lg:visible lg:mx-auto lg:px-3"
+          aria-label="Beautiful Images"
+        >
+          <div class="splide__track lg:visible">
+            <ul class="splide__list ">
+              <li class="splide__slide ">
+                <img class="" src="public/gal6.jpg" />
+              </li>
+              <li class="splide__slide">
+                <img class="" src="public/gal5.jpg" />
+              </li>
+              <li class="splide__slide">
+                <img class="" src="./public/gal7.jpg" />
               </li>
             </ul>
           </div>
@@ -519,7 +539,6 @@
         </div>
         <div class="mt-1">
           <p class="text-center font-Poppins text-Blanco text-xs">
-            Aprobado por MEDUCA <br />
             Resolución N°.5260 <br />
             del 11 de nov 2021
           </p>

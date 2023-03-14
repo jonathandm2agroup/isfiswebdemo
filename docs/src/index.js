@@ -103,14 +103,28 @@ document.addEventListener('DOMContentLoaded', ()=> {
         }).mount();
 
         //Carrousel instalaciones 
-        new Splide('#instalaciones', {
-            type   : 'loop',
-            perPage: 1,
-            autoplay: 'play',
-            interval: 2000,
-            arrows:false
-        }).mount();
-
+        console.log()
+        if(window.innerWidth < 1024){
+            new Splide('#instalaciones', {
+                type   : 'loop',
+                perPage: 1,
+                autoplay: 'play',
+                interval: 2000,
+                arrows:false
+            }).mount();
+            console.log("hola")
+        }
+        if(window.innerWidth >= 1024){
+            new Splide('#instalacionesDesktop', {
+                type   : 'loop',
+                perPage: 2,
+                autoplay: 'play',
+                gap: 4,
+                interval: 2000,
+                rewind  : true,
+            }).mount();
+            console.log("Hola2")
+        }
         // Carrousel Clientes
         new Splide("#clientes", {
             type   : 'loop',
